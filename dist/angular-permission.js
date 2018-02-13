@@ -815,7 +815,7 @@
          */
         function onAuthorizedAccess() {
           if (angular.isFunction(permission.onAuthorized)) {
-            permission.onAuthorized()($element);
+            permission.onAuthorized($element);
           } else {
             var onAuthorizedMethodName = $permission.defaultOnAuthorizedMethod;
             PermPermissionStrategies[onAuthorizedMethodName]($element);
@@ -828,7 +828,7 @@
          */
         function onUnauthorizedAccess() {
           if (angular.isFunction(permission.onUnauthorized)) {
-            permission.onUnauthorized()($element);
+            permission.onUnauthorized($element);
           } else {
             var onUnauthorizedMethodName = $permission.defaultOnUnauthorizedMethod;
             PermPermissionStrategies[onUnauthorizedMethodName]($element);
